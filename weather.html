@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Погода</title>
+    <link rel="stylesheet" href="weather.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🌤 Прогноз погоды</h1>
+    </header>
+
+    <main>
+      <div class="search-box">
+        <input id="city" placeholder="Введите город..." />
+        <button id="getWeather">Узнать</button>
+      </div>
+
+      <div id="result" class="card hidden"></div>
+    </main>
+
+    <footer>
+      <p>Данные: <a href="https://wttr.in" target="_blank">wttr.in</a></p>
+    </footer>
+
+    <script type="module" src="weather.js"></script>
+  </body>
+</html>
