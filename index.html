@@ -2,16 +2,37 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <title>Vite App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Public API Requests</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <h1>Добро пожаловать!</h1>
-  <nav>
-    <a href="weather.html">Погода</a>
-    <a href="currency.html">Конвертер валют</a>
-    <a href="dogs.html">Собаки</a>
-  </nav>
-  <script type="module" src="main.js"></script>
+<body class="index-page">
+  <header class="index-header">
+    <h1>🌐 Public API</h1>
+  </header>
+
+  <main class="index-main">
+    <div class="index-container">
+      <div class="index-card">
+        <h2>Погода</h2>
+        <p>Узнай погоду по названию города</p>
+        <a href="weather.html" class="index-btn">Открыть</a>
+      </div>
+      <div class="index-card">
+        <h2>Валюты</h2>
+        <p>Конвертер валют в реальном времени</p>
+        <a href="currency.html" class="index-btn">Открыть</a>
+      </div>
+      <div class="index-card">
+        <h2>Фото собак</h2>
+        <p>Случайные картинки с Dog API</p>
+        <a href="dogs.html" class="index-btn">Открыть</a>
+      </div>
+    </div>
+  </main>
+
+
+
+  <script src="main.js"></script>
 </body>
 </html>
