@@ -2,13 +2,17 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Собаки</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="dogs.css" />
 </head>
 <body>
-  <h1>Случайные собаки</h1>
-  <button id="newDog">Показать собаку</button>
-  <div id="dog"></div>
+  <div class="container">
+    <h1>Нажмите на кнопку, чтобы посмотреть на собачку</h1>
+    <button id="newDog">Показать собачку</button>
+    <div id="dog" class="dog-container">
+    </div>
+  </div>
   <script type="module" src="dogs.js"></script>
 </body>
 </html>
