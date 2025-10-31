@@ -1,10 +1,11 @@
-body {
+body:not(.index-page) {
   font-family: system-ui, sans-serif;
   max-width: 600px;
   margin: 40px auto;
   padding: 10px;
   text-align: center;
 }
+
 nav a {
   margin: 0 10px;
   text-decoration: none;
@@ -35,12 +36,14 @@ body.index-page {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .index-header {
   text-align: center;
   padding: 60px 20px 20px;
   width: 100%;
+  max-width: 1200px;
 }
 
 .index-header h1 {
@@ -67,6 +70,7 @@ body.index-page {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 0;
+  justify-items: center;
 }
 
 .index-card {
@@ -81,6 +85,8 @@ body.index-page {
   justify-content: center;
   text-align: center;
   min-height: 200px;
+  width: 100%;
+  max-width: 300px;
 }
 
 .index-card:hover {
@@ -125,6 +131,7 @@ body.index-page {
   color: #777;
   background: rgba(255,255,255,0.5);
   width: 100%;
+  max-width: 1200px;
 }
 
 @media (max-width: 900px) {
@@ -151,5 +158,6 @@ body.index-page {
 
   .index-card {
     padding: 30px 20px;
+    max-width: none;
   }
 }
