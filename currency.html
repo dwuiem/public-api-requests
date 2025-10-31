@@ -2,25 +2,36 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Конвертер валют</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="currency.css" />
 </head>
 <body>
-  <h1>Конвертер валют</h1>
-  <input id="amount" type="number" placeholder="Сумма" />
-  <select id="from">
-    <option>USD</option>
-    <option>EUR</option>
-    <option>RUB</option>
-  </select>
-  →
-  <select id="to">
-    <option>USD</option>
-    <option>EUR</option>
-    <option>RUB</option>
-  </select>
-  <button id="convert">Конвертировать</button>
-  <div id="result"></div>
+  <h1>💱 Конвертер валют</h1>
+  <div class="converter-container">
+    <div class="input-group">
+      <input id="amount" type="number" placeholder="Введите сумму..." />
+      <select id="from">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="RUB">RUB</option>
+        <option value="GBP">GBP</option>
+        <option value="JPY">JPY</option>
+        <option value="CNY">CNY</option>
+      </select>
+      <span class="arrow">→</span>
+      <select id="to">
+        <option value="RUB">RUB</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="JPY">JPY</option>
+        <option value="CNY">CNY</option>
+      </select>
+    </div>
+    <button id="convert">Конвертировать</button>
+    <div id="result"></div>
+  </div>
   <script type="module" src="currency.js"></script>
 </body>
 </html>

@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+h1 {
+  color: white;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  font-size: 2rem;
+}
+
+.converter-container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 400px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+#amount {
+  flex: 1.2;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+  min-width: 80px;
+}
+
+#amount:focus {
+  border-color: #43cea2;
+}
+
+select {
+  flex: 0.8;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.3s;
+  background-color: white;
+  min-width: 70px;
+}
+
+select:focus {
+  border-color: #43cea2;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+#convert {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(45deg, #43cea2, #185a9d);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#convert:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#convert:active {
+  transform: translateY(0);
+}
+
+#result {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #185a9d;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 12px;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s;
+  word-break: break-word;
+}
+
+#result.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+  .converter-container {
+    padding: 20px;
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+  }
+
+  .input-group {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  #amount {
+    flex: 1 1 100%;
+  }
+
+  select {
+    flex: 1 1 calc(50% - 15px);
+    min-width: 0;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  #result {
+    font-size: 1.1rem;
+    padding: 10px;
+  }
+}
